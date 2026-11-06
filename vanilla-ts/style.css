@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  padding: 24px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+form, .controls {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+input, select, button {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+form input, form select {
+  flex: 1 1 calc(33.333% - 12px);
+  min-width: 180px;
+}
+
+form button {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+form button:hover {
+  background-color: #1d4ed8;
+}
+
+.controls input {
+  flex: 2;
+  min-width: 200px;
+}
+
+.controls select {
+  flex: 1;
+  min-width: 140px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 5px solid #2563eb;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card.inactive {
+  border-left-color: #9ca3af;
+  opacity: 0.85;
+}
+
+.card button.delete-btn {
+  margin-top: 8px;
+  background-color: #dc2626;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.card button.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+.empty-state {
+  text-align: center;
+  grid-column: 1 / -1;
+  color: #6b7280;
+  padding: 32px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Management - Vanilla TS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Student Management System (Vanilla TS)</h1>
+
+    <form id="student-form">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="number" id="age" placeholder="Age" required min="1" />
+      <select id="department" required>
+        <option value="Computer">Computer</option>
+        <option value="Civil">Civil</option>
+        <option value="Electrical">Electrical</option>
+        <option value="Mechanical">Mechanical</option>
+      </select>
+      <input type="text" id="phone" placeholder="Phone (Optional)" />
+      <button type="submit">Add Student</button>
+    </form>
+
+    <div class="controls">
+      <input type="text" id="search-input" placeholder="Search by name..." />
+      <select id="filter-dept">
+        <option value="ALL">All Departments</option>
+        <option value="Computer">Computer</option>
+        <option value="Civil">Civil</option>
+        <option value="Electrical">Electrical</option>
+        <option value="Mechanical">Mechanical</option>
+      </select>
+      <select id="filter-status">
+        <option value="ALL">All Status</option>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+      </select>
+    </div>
+
+    <div id="student-list" class="grid"></div>
+  </div>
+
+  <script type="module" src="./src/app.ts"></script>
+</body>
+</html>
